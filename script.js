@@ -1,18 +1,15 @@
 // complete the given function
 
 const palindromeChecker = (str) => {
-  let temp = str.toLowerCase();
-  let left = 0
-  let right = str.length()-1
-  while(left < right) {
-	  let char_left = temp.charAt(left)
-	  let char_right = temp.charAt(right)
-	  if(char_left != char_right) {
-		  return false;
-	  }
-	  left++
-	  right--
+  let temp = "";
+  str = str.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    temp += str[i];
   }
-	return true
+  for (let i = 0; i < temp.length / 2; i++) {
+    if (temp[i] != temp[temp.length - 1 - i]) 
+		return false;
+  }
+  return true;
 };
 module.exports = palindrome
