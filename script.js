@@ -10,6 +10,8 @@ const palindromeChecker = (str) => {
 	  if(char_left != char_right) {
 		  return false;
 	  }
+	  left++
+	  right--
   }
 	return true
 };
